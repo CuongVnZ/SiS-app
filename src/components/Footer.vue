@@ -1,7 +1,9 @@
 <!-- Footer -->
 
 <script lang="ts">
-
+    export default {
+        name: 'Footer'
+    }
 </script>
 
 <template>
