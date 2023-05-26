@@ -6,11 +6,13 @@ import App from './App.vue'
 import HomePage from './pages/HomePage.vue'
 import Test from './components/Test.vue'
 import DetailPage from './pages/DetailPage.vue'
+import ListPageVue from './pages/ListPage.vue'
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/test', component: Test },
-    { path: '/details', component: DetailPage },
+    { path: '/list', component: ListPageVue },
+    { path: '/lecturers/:id', name: 'LecturerDetail', component: DetailPage },
 
 ]
 

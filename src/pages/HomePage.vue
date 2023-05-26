@@ -50,7 +50,7 @@ const campuses = [
       </div>
     </div>
     <p class="text-white mb-8">{{ campuses[0].content }}</p>
-    <a :href="campuses[0].url" class="inline-block bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-10 rounded-md transition duration-300">View</a>
+    <a href="/list" class="inline-block bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-10 rounded-md transition duration-300">View</a>
   </div>
 
   <Footer />
