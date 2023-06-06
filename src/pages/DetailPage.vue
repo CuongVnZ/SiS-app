@@ -6,7 +6,7 @@
           <!-- <h2 class="text-3xl font-bold text-swinburne-red">Dr. Van Ho</h2> -->
           <h2 class="text-3xl font-bold text-swinburne-red">{{ lecturer.name }}</h2>
           <!-- photo of lecturer -->
-          <img class="h-32 w-32 rounded-full mx-auto mt-4" src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.15752-9/346169784_976625473470711_7038082353962119584_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=1L-dOS8Rc4UAX_duVs7&_nc_ht=scontent.fsgn5-8.fna&oh=03_AdRYrn4tEGc_HfLooCIbfZcCTzKIEMO2_Rv4OVbMocHcKQ&oe=6497137B" alt="">
+          <img class="h-32 w-32 rounded-full mx-auto mt-4" :src=lecturer.photo alt="">
           <!-- <p class="text-gray-600 mt-5">ICT</p> -->
           <p class="text-gray-600 mt-5">{{ lecturer.department }}</p>
           <!-- Overall rating -->
@@ -87,9 +87,12 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 import { lecturers } from "../data.ts";
 
-export default {
+let lecturer = lecturers[0];
+
+export default defineComponent({
   name: "PageDetail",
   data() {
     return {
@@ -106,14 +109,14 @@ export default {
 
     // If the lecturer is not found, redirect to 404 page
     if (!this.lecturer) {
-      this.$router.push({ name: "404" });
+      this.$router.push({ name: "HomePage" });
     }
 
     // Set the page title to the lecturer's name
     document.title = `${this.lecturer.name} | Lecturer Review`;
     
   }
-};
+});
 </script>
 
 <style>

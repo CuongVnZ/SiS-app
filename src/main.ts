@@ -9,7 +9,7 @@ import DetailPage from './pages/DetailPage.vue'
 import ListPageVue from './pages/ListPage.vue'
 
 const routes = [
-    { path: '/', component: HomePage },
+    { path: '/', name: 'HomePage', component: HomePage },
     { path: '/test', component: Test },
     { path: '/list', component: ListPageVue },
     { path: '/lecturers/:id', name: 'LecturerDetail', component: DetailPage },
