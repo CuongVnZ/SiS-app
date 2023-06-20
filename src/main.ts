@@ -13,7 +13,6 @@ const routes = [
     { path: '/test', component: Test },
     { path: '/list', component: ListPageVue },
     { path: '/lecturers/:id', name: 'LecturerDetail', component: DetailPage },
-
 ]
 
 const router = createRouter({
